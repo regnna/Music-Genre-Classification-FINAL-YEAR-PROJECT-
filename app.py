@@ -90,8 +90,8 @@ def getmetadata(song):
 
 
 with st.expander("Description"):
-    st.info("""A Simple ML Model to predict IPL Scores between teams in an ongoing match. To make sure the model results accurate score and some reliability the minimum no. of current overs considered is greater than 5 overs.
-    
+    st.info("""A Simple ML Website to predict genre of a given music/song, the .wav file of the audio required to detect its genre.
+    ENJOY!!
  """)
 uploaded_file = st.file_uploader("Upload a .wav file please", type='wav')
 
