@@ -1,0 +1,9 @@
+
+
+streamlit
+# pickle
+librosa
+matplotlib
+numpy
+pandas
+scikit-learn
