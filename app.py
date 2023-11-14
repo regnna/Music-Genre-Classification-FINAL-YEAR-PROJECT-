@@ -46,7 +46,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Add description
 
 
 def getmetadata(song):
