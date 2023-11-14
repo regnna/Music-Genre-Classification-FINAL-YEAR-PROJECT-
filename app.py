@@ -19,7 +19,7 @@ st.set_page_config(page_title='Music Genre Prediction', layout="centered", initi
                    })
 
 
-st.markdown("<h1 style='text-align: center; color: gold;'> Music Genre Prediction </h1>",
+st.markdown("<h1 style='text-align: center; color: gold;'> Find your Genre </h1>",
             unsafe_allow_html=True)
 
 hide_st_style = """
