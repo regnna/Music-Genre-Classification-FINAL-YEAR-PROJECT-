@@ -48,9 +48,9 @@ st.markdown(
 
 
 
-def getmetadata(song):
-    import librosa
-    y, sr = librosa.load(song, mono=True, duration=500)
+def getmetadata(y,sr):
+    # import librosa
+    # y, sr = librosa.load(song, mono=True, duration=500)
     chroma_stft = librosa.feature.chroma_stft(y=y, sr=sr)
     rms = librosa.feature.rms(y=y)
     spec_cent = librosa.feature.spectral_centroid(y=y, sr=sr)
@@ -83,7 +83,6 @@ def getmetadata(song):
     for i in range(1, 21): # For each of 20 MFCCs
         feature_dict[f'mfcc{i}_mean'] = np.mean(mfcc[i-1])
         feature_dict[f'mfcc{i}_var'] = np.var(mfcc[i-1])
-    st.audio(y, sample_rate=sr)
     # 'label': ... # Requires additional context. 
     return list(feature_dict.values())
 
@@ -99,8 +98,11 @@ if uploaded_file is None:
 
 else:
     # Process the uploaded WAV file
-    
-    g = getmetadata(uploaded_file)
+    import librosa
+    y, sr = librosa.load(uploaded_file, mono=True, duration=500)
+    st.audio(y, sample_rate=sr)
+
+    g = getmetadata(y,sr)
     path = os.path.join('svc_model (2).hdf5')
     with open(path, 'rb') as pickled:
         data = pickle.load(pickled)
