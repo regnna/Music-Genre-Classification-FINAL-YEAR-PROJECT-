@@ -26,7 +26,21 @@ page_icon="logo.jpeg",
     })
 
 
-st.markdown("<h1 style='text-align: center; color: white;'> Music Genre Prediction </h1>", unsafe_allow_html=True)
+st.markdown(
+    f"""
+         <style>
+         .stApp {{
+             background-image:
+              url("https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+    unsafe_allow_html=True
+)
+
+st.markdown("<h1 style='text-align: center; color: violet;'> Music Genre Prediction </h1>", unsafe_allow_html=True)
 
 hide_st_style="""
                 <style>
@@ -64,7 +78,7 @@ def set_bg_hack(main_bg):
     )
 
 
-set_bg_hack('1333741.png')
+# set_bg_hack('1333741.png')
 #Add description
 
 def getmetadata(y,sr):
@@ -115,7 +129,7 @@ uploaded_file = st.file_uploader(
 
 if uploaded_file is None:
     # st.write("Upload WAV file")
-    st.markdown(f"<h3 style='text-align: center; color: white;'> Upload a .wav file please</h3>",
+    st.markdown(f"<h3 style='text-align: center; color: black;'> Upload a .wav file please</h3>",
                 unsafe_allow_html=True)
 
 else:
