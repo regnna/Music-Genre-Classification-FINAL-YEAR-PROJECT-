@@ -158,6 +158,7 @@ else:
                 {
                         color: gold;
                         text-align: center;
+                        text:bold;
                     }
                     """,
 
