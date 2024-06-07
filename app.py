@@ -118,7 +118,7 @@ st.markdown(
 
 
 with st.expander("Description"):
-    st.info("""A Simple ML Website to predict genre of a given music/song, the .wav file of the audio required to detect its genre.
+    st.info("""A Simple ML Website to predict genre of a given music/song, the .wav file of the audio required to detect its genre & recommend you your own playlist based on the input audio .
     ENJOY!! 
     To convert your mp3's into suitable Wave formates [CLICK HERE](https://convertio.co/mp3-wav/)
  """)
